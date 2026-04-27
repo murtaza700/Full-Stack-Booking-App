@@ -1,21 +1,24 @@
-import React from 'react'
-import { lazy } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import React from 'react';
+import { lazy } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
 
+const AuthPage = lazy(() => import('./pages/AuthPage'));
 const HomePage = lazy(() => import('./pages/HomePage'));
-const RegisterPage = lazy(() => import('./pages/RegisterPage'));
-const LoginPage = lazy(() => import('./pages/LoginPage'));
 
 const App = () => {
   return (
-    <>
+    <div className='flex'>
+
+      <Navbar />
+
       <Routes>
         <Route path='/' element={<HomePage />} />
 
-        <Route path='/login' element={<LoginPage />} />
-        <Route path='/register' element={<RegisterPage />} />
+        <Route path='/login' element={<AuthPage />} />
+        <Route path='/register' element={<AuthPage />} />
       </Routes>
-    </>
+    </div>
   )
 }
 
