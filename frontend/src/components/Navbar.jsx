@@ -76,7 +76,7 @@ const Navbar = () => {
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
             transition={{ duration: 0.3 }}
-            className='fixed top-0 left-0 h-full w-[75%] max-w-[40%] bg-white z-50 shadow-lg p-5 flex flex-col gap-5'
+            className='fixed top-0 left-0 h-full w-[75%] max-w-[70%] bg-white z-50 shadow-lg p-5 flex flex-col gap-5'
           >
 
             <div className='flex items-center justify-between'>
@@ -109,8 +109,9 @@ const Navbar = () => {
             </Link>
 
             <div className='flex items-center gap-4 mt-4'>
-              <Link to="/user" onClick={() => setIsOpen(false)}>
+              <Link className='flex items-center justify-center gap-2' to="/user" onClick={() => setIsOpen(false)}>
                 <UserRound />
+                Profile
               </Link>
             </div>
 
