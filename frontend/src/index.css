@@ -27,3 +27,7 @@
     --color-Input-Border: #E5E7EB;
     --color-Input-Focus: #4F46E5;
 }
+
+body {
+    background-color: var(--color-BG);
+}

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
   const links = [
     { name: 'Home', link: '/' },
-    { name: 'Login', link: '/login' }
+    { name: 'Login', link: '/auth' }
   ]
   return (
     <div>
