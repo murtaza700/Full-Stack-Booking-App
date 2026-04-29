@@ -8,7 +8,7 @@ const HomePage = lazy(() => import('./pages/HomePage'));
 
 const App = () => {
   return (
-    <div className='flex'>
+    <>
 
       <Navbar />
 
@@ -17,7 +17,7 @@ const App = () => {
 
         <Route path='/auth' element={<AuthPage />} />
       </Routes>
-    </div>
+    </>
   )
 }
 
