@@ -59,6 +59,7 @@ function RegisterPage() {
   const [showPass, setShowPass] = useState(false);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [role, setRole] = useState('user');
 
   const form = async (e) => {
     e.preventDefault();
@@ -93,7 +94,7 @@ function RegisterPage() {
 
     try {
       const res = await axios.post(`http://localhost:5000/api/auth/register`,
-        { username, email, password },
+        { username, email, password, role },
         { withCredentials: true }
       );
 
@@ -214,6 +215,23 @@ function RegisterPage() {
 
           </div>
 
+
+          <div className='flex items-start justify-start flex-col w-full'>
+
+            <label className='text-[13px] font-semibold text-Text-Primary' htmlFor="role">Are you service provider?</label>
+
+            <select
+              value={role}
+              onChange={(e) => setRole(e.target.value)}
+              className='flex items-center justify-center w-full border rounded-md py-3 px-4 border-Input-Border cursor-pointer text-[13px]'
+              name="role"
+              id="role">
+              <option className='text-sm' value="user">No! I'm not service provider</option>
+              <option className='text-sm' value="provider">Yes! I'm service provider</option>
+            </select>
+
+          </div>
+          {console.log(role)}
         </div>
 
         <div className='flex items-center justify-start gap-3 px-1 my-4'>
