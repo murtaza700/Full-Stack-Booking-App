@@ -11,7 +11,7 @@ const ExploreCategories = () => {
         { name: 'Wellness', Icon: Flower },
     ]
     return (
-        <div className='px-[4%] py-5'>
+        <div className='px-[4%] py-12'>
             <div className='flex items-center justify-between mb-10'>
                 <div className='flex flex-col items-start justify-start gap-[2px]'>
                     <h3 className='text-Text-Primary text-sm font-semibold'>Explore Categories</h3>

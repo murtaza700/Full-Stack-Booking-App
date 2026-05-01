@@ -231,7 +231,7 @@ function RegisterPage() {
             </select>
 
           </div>
-          {console.log(role)}
+
         </div>
 
         <div className='flex items-center justify-start gap-3 px-1 my-4'>

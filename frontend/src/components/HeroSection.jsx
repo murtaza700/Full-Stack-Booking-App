@@ -2,7 +2,7 @@ import React from 'react'
 import { MapPin, Search } from 'lucide-react'
 
 const HeroSection = () => {
-    return (<div className='flex bg-BG items-center justify-between flex-col md:flex-row min-h-[calc(100vh-64px)] py-10 md:py-[3%] px-[4%]'>
+    return (<div className='flex bg-linear-to-br from-[#FCF8FF] to-[#F0ECF9] items-center justify-between flex-col md:flex-row min-h-screen py-10 md:py-[3%] px-[4%]'>
 
         <div className='md:w-1/2 w-full'>
 
