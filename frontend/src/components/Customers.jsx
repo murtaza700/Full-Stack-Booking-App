@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import { motion } from 'motion/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import CustomerReviewsComp from './CustomerReviewsComp'
@@ -71,25 +72,29 @@ const Customers = () => {
 
             <div className="w-full relative">
 
-                <button
+                <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
                     ref={prevRef}
-                    className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow p-2 rounded-full hover:bg-gray-100"
+                    className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow p-2 rounded-full hover:bg-gray-100 cursor-pointer"
                 >
                     <ArrowLeft size={20} />
-                </button>
+                </motion.button>
 
-                <button
+                <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
                     ref={nextRef}
-                    className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow p-2 rounded-full hover:bg-gray-100"
+                    className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow p-2 rounded-full hover:bg-gray-100 cursor-pointer"
                 >
                     <ArrowRight size={20} />
-                </button>
+                </motion.button>
 
                 <Swiper
                     modules={[Navigation, Pagination, Autoplay]}
                     centeredSlides={true}
                     autoplay={{ delay: 3000, disableOnInteraction: false }}
-                    speed={800}
+                    speed={500}
                     spaceBetween={20}
                     loop={true}
                     autoplay={{ delay: 3000 }}
