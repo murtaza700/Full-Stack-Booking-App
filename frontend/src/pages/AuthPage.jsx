@@ -17,7 +17,7 @@ export default function AuthPage() {
         <p className='text-sm text-gray-500'>The high-trust marketplace for local experts.</p>
       </div>
 
-      <div className='border border-Border bg-white max-w-[480px] p-7 w-full shadow-Card-Shadow rounded-md'>
+      <div className='border border-Border bg-white max-w-120 p-7 w-full shadow-Card-Shadow rounded-md'>
 
         <div className="flex mb-7 bg-gray-200 rounded-md overflow-hidden p-2">
           <button
@@ -120,7 +120,7 @@ function RegisterPage() {
   }
 
   return (
-    <div className='flex items-center justify-center flex-col w-full min-h-[400px]'>
+    <div className='flex items-center justify-center flex-col w-full min-h-100'>
 
       <form
         onSubmit={form}
@@ -236,7 +236,7 @@ function RegisterPage() {
 
         <div className='flex items-center justify-start gap-3 px-1 my-4'>
           <input type='checkbox' id='keepsigned' />
-          <label className='cursor-pointer text-[13px] font-[500] text-Text-Primary' name='keepsigned' htmlFor="keepsigned">Keep me signed in for 30 days</label>
+          <label className='cursor-pointer text-[13px] font-medium text-Text-Primary' name='keepsigned' htmlFor="keepsigned">Keep me signed in for 30 days</label>
         </div>
 
         {message && (
@@ -251,9 +251,9 @@ function RegisterPage() {
       </form>
 
       <div className='flex items-center justify-center w-full my-6'>
-        <div className='h-[1px] bg-Text-Secondary w-full'></div>
+        <div className='h-px bg-Text-Secondary w-full'></div>
         <span className='w-full text-[10px] font-bold text-Text-Secondary text-center'>OR CONTINUE WITH</span>
-        <div className='h-[1px] bg-Text-Secondary w-full'></div>
+        <div className='h-px bg-Text-Secondary w-full'></div>
       </div>
 
       <div className='flex items-center justify-center gap-10 w-full'>
@@ -344,7 +344,7 @@ function LoginPage() {
   }
 
   return (
-    <div className='flex items-center justify-center flex-col w-full min-h-[400px]'>
+    <div className='flex items-center justify-center flex-col w-full min-h-100'>
 
       <form
         onSubmit={form}
@@ -419,7 +419,7 @@ function LoginPage() {
 
         <div className='flex items-center justify-start gap-3 px-1 my-4'>
           <input type='checkbox' id='keepsigned' />
-          <label className='cursor-pointer text-[13px] font-[500] text-Text-Primary' name='keepsigned' htmlFor="keepsigned">Keep me signed in for 30 days</label>
+          <label className='cursor-pointer text-[13px] font-medium text-Text-Primary' name='keepsigned' htmlFor="keepsigned">Keep me signed in for 30 days</label>
         </div>
 
         {message && (
@@ -434,9 +434,9 @@ function LoginPage() {
       </form>
 
       <div className='flex items-center justify-center w-full my-6'>
-        <div className='h-[1px] bg-Text-Secondary w-full'></div>
+        <div className='h-px bg-Text-Secondary w-full'></div>
         <span className='w-full text-[10px] font-bold text-Text-Secondary text-center'>OR CONTINUE WITH</span>
-        <div className='h-[1px] bg-Text-Secondary w-full'></div>
+        <div className='h-px bg-Text-Secondary w-full'></div>
       </div>
 
       <div className='flex items-center justify-center gap-10 w-full'>

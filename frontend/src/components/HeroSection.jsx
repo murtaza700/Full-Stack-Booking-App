@@ -25,7 +25,7 @@ const HeroSection = () => {
                     />
                 </div>
 
-                <div className='hidden md:block bg-black/20 w-[1px] h-7 mx-3' />
+                <div className='hidden md:block bg-black/20 w-px h-7 mx-3' />
 
                 <div className='flex items-center gap-2 text-Text-Secondary w-full md:w-[40%]'>
                     <MapPin />
@@ -79,7 +79,7 @@ const HeroSection = () => {
         <div className='flex items-center justify-center w-full md:w-1/2 mt-10 md:mt-0'>
             <div className='rounded-md overflow-hidden shadow-Card-Shadow w-full max-w-md'>
                 <img
-                    className='w-full h-[300px] md:h-[450px] object-cover'
+                    className='w-full h-75 md:h-112.5 object-cover'
                     src="/heroimage.avif"
                     alt="hero"
                 />
