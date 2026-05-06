@@ -73,8 +73,12 @@ const Login = async (req, res) => {
     }
 
     const token = jwt.sign(
-        { id: user._id, email: user.email, role: user.role },
-        process.env.JWT_SECRET
+        {
+            id: user._id,
+            role: user.role,
+        },
+        process.env.JWT_SECRET,
+        { expiresIn: "7d" }
     );
 
     res.cookie('token', token, {
@@ -83,7 +87,6 @@ const Login = async (req, res) => {
         sameSite: 'lax',
         maxAge: 7 * 24 * 60 * 60 * 1000
     });
-
     return res.status(200).json({
         success: true,
         message: 'Logged In Successfuly!',
@@ -96,4 +99,34 @@ const Login = async (req, res) => {
     });
 }
 
-module.exports = { Register, Login };
+const Logout = async (req, res) => {
+    res.cookie("token", "", {
+        httpOnly: true,
+        expires: new Date(0),
+    });
+
+    res.json({
+        success: true,
+        message: "Logged out successfully",
+    });
+};
+
+const Me = async (req, res) => {
+    try {
+        const user = await User.findById(req.user.id).select("-password");
+
+        res.status(200).json({
+            success: true,
+            user
+        });
+
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json({
+            success: false,
+            message: 'Server Error!'
+        });
+    }
+}
+
+module.exports = { Register, Login, Logout, Me };
