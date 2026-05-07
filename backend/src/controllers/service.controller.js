@@ -28,7 +28,7 @@ const getServices = async (req, res) => {
 
         let servicesQuery = Service.find(query)
             .populate("category", "name")
-            .populate("provider", "name");
+            .populate("provider", "username email");
 
         if (sort === "low") {
             servicesQuery = servicesQuery.sort({ price: 1 });
@@ -57,7 +57,7 @@ const getSingleService = async (req, res) => {
     try {
         const service = await Service.findById(req.params.id)
             .populate("category", "name")
-            .populate("provider", "name email");
+            .populate("provider", "username email");
 
         if (!service) {
             return res.status(404).json({

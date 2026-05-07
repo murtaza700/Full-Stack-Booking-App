@@ -105,7 +105,7 @@ const Logout = async (req, res) => {
         expires: new Date(0),
     });
 
-    res.json({
+    return res.status(200).json({
         success: true,
         message: "Logged out successfully",
     });

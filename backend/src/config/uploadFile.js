@@ -7,7 +7,7 @@ const imagekit = new ImageKit({
 async function uploadFile(file) {
     const result = await imagekit.files.upload({
         file,
-        fileName: 'file_' + Date.now(),
+        fileName: 'image_' + Date.now(),
         folder: 'Servixo'
     });
 
