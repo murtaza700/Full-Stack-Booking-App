@@ -32,7 +32,7 @@ const Register = async (req, res) => {
 
     await newUser.save();
 
-    return res.status(401).json({
+    return res.status(200).json({
         success: true,
         message: 'Registered Successfuly!',
         user: {

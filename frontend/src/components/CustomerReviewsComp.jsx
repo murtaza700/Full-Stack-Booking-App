@@ -15,7 +15,7 @@ const CustomerReviewsComp = ({ review }) => {
 
                 <div className='flex items-center justify-center mb-5'>
                     {[...Array(review.stars)].map((_, index) => (
-                        <Star className='fill-orange-400 text-orange-400' size={13} />
+                        <Star className='fill-orange-400 text-orange-400' key={index} size={13} />
                     ))}
                 </div>
 

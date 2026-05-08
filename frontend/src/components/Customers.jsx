@@ -111,7 +111,7 @@ const Customers = () => {
                     }}
                 >
                     {customers.map((review) => (
-                        <SwiperSlide key={review.name}>
+                        <SwiperSlide key={review.index}>
                             <CustomerReviewsComp review={review} />
                         </SwiperSlide>
                     ))}

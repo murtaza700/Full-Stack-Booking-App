@@ -61,6 +61,8 @@ function RegisterPage() {
   const [loading, setLoading] = useState(false);
   const [role, setRole] = useState('user');
 
+  const API_BASE = import.meta.env.VITE_API_URL;
+
   const form = async (e) => {
     e.preventDefault();
     setError(false);
@@ -93,7 +95,7 @@ function RegisterPage() {
     setLoading(true);
 
     try {
-      const res = await axios.post(`http://localhost:5000/api/auth/register`,
+      const res = await axios.post(`${API_BASE}/api/auth/register`,
         { username, email, password, role },
         { withCredentials: true }
       );
@@ -286,6 +288,8 @@ function LoginPage() {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  const API_BASE = import.meta.env.VITE_API_URL;
+
   const form = async (e) => {
     e.preventDefault();
     setError(false);
@@ -318,7 +322,7 @@ function LoginPage() {
     setLoading(true);
 
     try {
-      const res = await axios.post(`http://localhost:5000/api/auth/login`,
+      const res = await axios.post(`${API_BASE}/api/auth/login`,
         { email, password },
         { withCredentials: true }
       );
