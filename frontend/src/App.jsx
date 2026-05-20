@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 
 const AuthPage = lazy(() => import('./pages/AuthPage'));
 const HomePage = lazy(() => import('./pages/HomePage'));
+const ServiceDetailPage = lazy(() => import('./pages/ServiceDetailPage'));
 
 const App = () => {
   return (
@@ -14,9 +15,10 @@ const App = () => {
       <Navbar />
 
       <Routes>
-        <Route path='/' element={<HomePage />} />
-
         <Route path='/auth' element={<AuthPage />} />
+
+        <Route path='/' element={<HomePage />} />
+        <Route path='/services/:id' element={<ServiceDetailPage />} />
       </Routes>
 
       <Footer />

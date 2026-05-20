@@ -1,22 +1,30 @@
 import { Star } from 'lucide-react'
 import React from 'react'
 import { motion } from 'motion/react'
+import { Link, useParams } from 'react-router-dom'
 
 const FeaturedServiceComp = ({ service }) => {
+    const { id } = useParams();
     return (
         <motion.div
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
             className='relative bg-white shadow-Card-Shadow rounded-md overflow-hidden'>
 
-            <img
-                className='w-full h-50 object-cover cursor-pointer hover:scale-105 transition-all duration-300'
-                src={service.image}
-                alt="service"
-            />
+            <Link to={`/services/${id}`}>
+                <img
+                    className='w-full h-50 object-cover cursor-pointer hover:scale-105 transition-all duration-300'
+                    src={service.image}
+                    alt="service"
+                />
+            </Link>
 
             <div className="p-5">
-                <h3 className='text-[18px] font-semibold text-Text-Primary'>{service.name}</h3>
+
+                <Link to={`/services/${id}`}>
+                    <h3 className='text-[18px] font-semibold text-Text-Primary'>{service.name}</h3>
+                </Link>
+
                 <p className='text-[12px] text-Text-Secondary mt-0.5 mb-2'>{service.description}</p>
 
                 <div className='flex items-center justify-between'>
