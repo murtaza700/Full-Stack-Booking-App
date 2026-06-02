@@ -44,3 +44,14 @@ h5 {
 body {
     background-color: var(--color-BG);
 }
+
+select,
+option,
+button,
+label {
+    cursor: pointer;
+}
+
+.ql-editor {
+    min-height: 300px;
+}
